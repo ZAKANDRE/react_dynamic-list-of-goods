@@ -9,6 +9,7 @@ export function getAll(): Promise<Good[]> {
     .catch(error => {
       // eslint-disable-next-line no-console
       console.error('Error fetching all goods', error);
+      throw error;
     });
 }
 
@@ -20,6 +21,7 @@ export const get5First = () => {
     .catch(error => {
       // eslint-disable-next-line no-console
       console.error('Error fetching 5 goods', error);
+      throw error;
     }); // sort and get the first 5
 };
 
@@ -29,5 +31,6 @@ export const getRedGoods = () => {
     .catch(error => {
       // eslint-disable-next-line no-console
       console.error('Error fetching red Goods', error);
+      throw error;
     }); // get only red
 };
